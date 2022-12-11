@@ -1,0 +1,88 @@
+ /**
+ * CONTENTS
+ *
+ * LAYOUT...............Basic rules for layout.
+ * SECTIONS.............Rules for each sections.
+ * MODIFIERS............Media queries for the layout.
+ *
+ */
+
+
+
+/*=== LAYOUT ===*/
+.container {
+  display:               grid;
+  grid-template-areas:
+                         "header header header"
+                         "menu main empty"
+                         "footer footer footer";
+  grid-template-columns: .65fr 2.5fr .45fr;
+  grid-template-rows:    auto 1fr auto;
+  grid-gap:              1rem 0;
+  height:                180vh;
+}
+
+.header {
+  grid-area: header;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+
+
+/*=== SECTIONS ===*/
+
+/* MENU */
+
+.menu {
+  display:        flex;
+  flex-direction: column;
+}
+
+
+/* MAIN */
+
+.first-block, .second-block, .third-block,
+.fourth-block, .fifth-block, .sixth-block {
+  margin: 2rem auto;
+}
+
+
+/* FOOTER */
+
+.footer {
+  display:         flex;
+  justify-content: space-evenly;
+}
+
+.box {
+  padding-top: min(1.5rem, 5%);
+}
+
+
+
+/*=== MODIFIERS ===*/
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas: 
+                           "header"
+                           "menu"
+                           "main"
+                           "footer";
+    grid-template-columns: 100%;
+    display:               grid;
+    margin-left:           auto;
+    margin-right:          auto;
+    }
+
+  }

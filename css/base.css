@@ -1,0 +1,61 @@
+/**
+ * OVERVIEW
+ *
+ * This project is separated to the following style sheets:
+ *
+ * base.css.............Global rules and helpers.
+ * layout.css...........CSS rules that control the layout of the page.
+ * components.css.......Own CSS for the components that build up the page.
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Box-sizing...........Better default `box-sizing`.
+ * Margins..............Top and bottom margins global values.
+ * Paddings.............Top and bottom paddings global values.
+ * Width................Base width values.
+ * Height...............Base height values.
+ *
+ */
+
+
+* {
+  box-sizing: border-box;
+  margin:     0;
+  padding:    0;
+}
+
+
+body {
+  margin: 0;
+}
+
+
+/* HEADER */
+
+.header {
+  width:   100%;
+  margin:  0 auto;
+  padding: 1.5rem 2.5rem;
+}
+
+
+/* MENU */
+
+.btn {
+  margin:  .2rem 1.5rem;
+  padding: .8rem .8rem;
+  height:  2.5rem;
+}
+
+
+/* MAIN */
+
+.main {
+  width:   100%;
+  margin:  0 auto;
+  padding: 2rem 3.5rem;
+}

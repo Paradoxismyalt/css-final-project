@@ -1,0 +1,232 @@
+/*
+ * 
+ * SKIN
+ *
+ * HEADER
+ *
+ * MENU
+ *
+ * MAIN
+ *
+ * FOOTER
+ *
+ * MODIFIERS
+ *
+ */
+
+
+
+/* === SKIN ===*/
+
+.container:before {
+  filter:           blur(.3rem);
+  content:          "";
+  position:         fixed;
+  top:              0;
+  left:             0;
+  right:            0;
+  bottom:           0;
+  z-index:          -1;
+  background-image: url(https://i.imgur.com/LfNpjm5.jpg);
+  background-size:  cover;
+  opacity:          0.25;
+}
+
+
+/* HEADER */
+
+.header {
+  background-color: #163e2f;
+  text-align:       left;
+  color:            #e1faf0;
+  font-family:      'Megrim', cursive;
+  font-size:        max(100%, 30px);
+  font-weight:      600;
+}
+
+
+/* MENU */
+
+.btn {
+ text-decoration: none;
+ color:           inherit;
+ display:         block;
+ text-align:      start;
+}
+
+
+.btn {
+  display:          inline-block;
+  background-color: #163e2f;
+  color:            #e1faf0;
+  font-family:      'Kumbh Sans', sans-serif;
+  font-weight:      400;
+  font-size:        .9rem;
+  letter-spacing:   .06rem;
+  text-transform:   uppercase;
+  border-radius:    .3rem;
+  border:           none;
+}
+
+
+/**
+ * Amikor egy kártya fölé visszük az egeret, háttérszíne megváltozik:
+ * - sötétebb árnyalatot kap, hogy ezzel mutassa, hogy aktívan rajta van az egér;
+ **/
+ .btn:hover {
+  background-color: #172c24;
+  transition:       background-color .25s ease-in-out;
+}
+
+
+/* MAIN */
+
+.main {
+  text-align:     left;
+  font-family:    'Exo 2', sans-serif;
+  font-size:      1.1rem;
+  letter-spacing: .02rem;
+  border:         .01rem solid #98aaa1;
+  color:          #0b1312;
+  line-height:    1.75rem;
+}
+
+.title {
+  font-family: 'Abel', sans-serif;
+  font-size:   2.25rem;
+  text-align:  left;
+}
+
+
+.main h2 {
+  font-size:      1.35rem;
+  padding-bottom: .5rem;
+}
+
+.first-block a {
+ text-decoration: none;
+ color:           inherit;
+ color:           #163e2f;
+ font-weight:     700;
+}
+
+.second-block {
+  display:     flex;
+  align-items: flex-start;
+  padding:     0 .5rem;
+}
+
+.second-block-image {
+  margin-right: 2rem;
+  width:        max(40%, 16rem);
+}
+
+.second-block-text {
+  flex:    1;
+  padding: .25rem 0;
+}
+
+.last-image {
+  max-width:   max(65%, 19rem);
+  margin:      auto;
+  padding-top: 2rem;
+  display:     flex;
+  align-items: center;
+  max-width:   max(65%, 20rem);
+}
+
+.btn__articles {
+  text-decoration:  none;
+  background-color: #163e2f;
+  color:            #e1faf0;
+  font-weight:      400;
+  font-size:        .9rem;
+  letter-spacing:   .06rem;
+  text-transform:   uppercase;
+  border-radius:    .3rem;
+  max-width:        max(65%, 20rem);
+  padding:          .35rem 2rem;
+  display:          inline-block;
+}
+
+/**
+ * A cikk alatti gombnak két különböző állapota van:
+ * 1) Normál állapot normál mérettel.
+ * 2) Egérrel rámutatás esetén megnövelt méret.
+ * - .7 mp-ig tart, amíg a teljes állapotát eléri a változás;
+ * - A megjelenés lassan indul, felgyorsul, majd lelassul a végső állapothoz közeledve.
+ *
+ **/
+ .btn__articles:hover {
+  transform:  scale(1.05);
+  transition: all .7s ease-out;
+}
+
+
+/* FOOTER */
+
+.footer {
+  background-color:#163e2f;
+  color:           #e1faf0;
+  text-transform:  uppercase;
+  font-family:     'Kumbh Sans', sans-serif;
+  font-size:       .9rem;
+  font-weight:     400;
+  letter-spacing:  .05rem;
+  height:          5rem;
+}
+
+
+/* MODIFIERS */
+@media (max-width: 768px) {  
+  .container:before {
+    filter:           blur(.1rem);
+    content:          "";
+    position:         fixed;
+    top:              0;
+    left:             0;
+    right:            0;
+    bottom:           0;
+    z-index:          -1;
+    background-image: url(https://i.imgur.com/LfNpjm5.jpg);
+    background-size:  cover;
+    opacity:          0.3;
+}
+  
+  .header {
+    display:     grid;
+    text-align:  center;
+    line-height: 2.25rem;
+  }
+ 
+  .btn {
+    text-align:  center;
+  }
+  
+  .main{
+    border: .1rem solid #98aaa1;
+  }
+       
+  .title {
+    line-height: 2rem;
+  }
+      
+  .article {
+    text-align: justify;
+    margin:     auto -1.75rem;
+  }
+  
+  .second-block {
+    display: grid;
+    padding: 0 .5rem;
+  }
+  
+  .btn__articles {
+    margin: 2rem 1rem;
+  }
+  
+  .footer {
+    min-height: 4rem;
+  }
+
+}

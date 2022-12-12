@@ -16,7 +16,7 @@
                          "header header header"
                          "menu main empty"
                          "footer footer footer";
-  grid-template-columns: .85fr 2.75fr .25fr;
+  grid-template-columns: .9fr 2.85fr .15fr;
   grid-template-rows:    auto 1fr auto;
   grid-gap:              1rem 0;
   height:                180vh;

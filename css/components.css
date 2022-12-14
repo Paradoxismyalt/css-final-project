@@ -127,12 +127,11 @@
 }
 
 .last-image {
-  max-width:   max(65%, 19rem);
+  max-width:   min(100%, 50rem);
   margin:      auto;
   padding-top: 2rem;
   display:     flex;
   align-items: center;
-  max-width:   max(65%, 20rem);
 }
 
 .btn__articles {

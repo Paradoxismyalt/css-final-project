@@ -118,7 +118,7 @@
 
 .second-block-image {
   margin-right: 2rem;
-  width:        max(40%, 16rem);
+  width:        min(100%, 26rem);
 }
 
 .second-block-text {
@@ -147,6 +147,7 @@
   max-width:        max(65%, 20rem);
   padding:          .35rem 2rem;
   display:          inline-block;
+  margin-left:      45rem; 
 }
 
 /**
@@ -222,7 +223,7 @@
   }
   
   .btn__articles {
-    margin: 2rem 1rem;
+    margin: 2rem 1.5rem;
   }
   
   .footer {
